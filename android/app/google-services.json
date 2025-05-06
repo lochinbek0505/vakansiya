@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "61236209576",
+    "project_id": "fire-9bccc",
+    "storage_bucket": "fire-9bccc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61236209576:android:66ab699a2ac968391edf9d",
+        "android_client_info": {
+          "package_name": "com.example.vakansiya"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD9NFERgr95llPN3hAj1W6OU1ZW-Rk3j8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61236209576:android:98413800fe7185871edf9d",
+        "android_client_info": {
+          "package_name": "com.wordpress.lochindasturlari.fire"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD9NFERgr95llPN3hAj1W6OU1ZW-Rk3j8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
