@@ -18,7 +18,6 @@ class JobSearchPage extends StatelessWidget {
           backgroundColor: Color(0xFF1F1F1F),
         ),
         body: JobList(),
-        bottomNavigationBar: BottomNavigatorExample(),
       ),
     );
   }

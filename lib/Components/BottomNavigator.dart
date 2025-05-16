@@ -10,59 +10,59 @@ class BottomNavigatorExample extends StatefulWidget {
 }
 
 class _BottomNavigatorExampleState extends State<BottomNavigatorExample> {
+  int _selectedIndex = 0;
+
+  // Sahifalarni bir marta yaratamiz va IndexedStack ichida saqlaymiz
+  final List<Widget> _pages = [
+    jobsList(),
+    JobSearchPage(),
+    JobPostingPage(),
+    JobProfilePage(),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: Theme.of(context).copyWith(
-        brightness: Brightness.dark,
-        canvasColor: Color.fromARGB(255, 10, 25, 47), // Tungi fon
-        primaryColor: Colors.white,
-        unselectedWidgetColor: Colors.grey[400],
+    return Scaffold(
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _pages,
       ),
-      child: BottomNavigationBar(
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.grey[400],
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.work),
-            label: 'Главная',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Поиск',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.post_add),
-            label: 'Разместить',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Профиль',
-          ),
-        ],
-        onTap: (int index) {
-          if (index == 0) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => jobsList()),
-            );
-          } else if (index == 1) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => JobSearchPage()),
-            );
-          } else if (index == 2) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => JobPostingPage()),
-            );
-          } else if (index == 3) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => JobProfilePage()),
-            );
-          }
-        },
+      bottomNavigationBar: Theme(
+        data: Theme.of(context).copyWith(
+          brightness: Brightness.dark,
+          canvasColor: Color.fromARGB(255, 10, 25, 47),
+          primaryColor: Colors.white,
+          unselectedWidgetColor: Colors.grey[400],
+        ),
+        child: BottomNavigationBar(
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.grey[400],
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.work),
+              label: 'Главная',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'Поиск',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.post_add),
+              label: 'Разместить',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Профиль',
+            ),
+          ],
+          onTap: (int index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+        ),
       ),
     );
   }

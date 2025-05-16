@@ -433,7 +433,7 @@ class _JobProfilePageState extends State<JobProfilePage> {
                   ],
                 ),
               ),
-              bottomNavigationBar: BottomNavigatorExample(),
+              // bottomNavigationBar: BottomNavigatorExample(),
             ),
           ),
         )

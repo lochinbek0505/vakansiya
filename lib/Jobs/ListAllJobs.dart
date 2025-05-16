@@ -75,7 +75,6 @@ class _jobsListState extends State<jobsList> {
           ],
         ),
         body: JobList(),
-        bottomNavigationBar: BottomNavigatorExample(),
       ),
     );
   }

@@ -148,7 +148,6 @@ class _JobPostingPageState extends State<JobPostingPage> {
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigatorExample(),
       ),
     );
   }

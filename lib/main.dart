@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
+import 'Components/BottomNavigator.dart';
 import 'Jobs/ListAllJobs.dart';
 import 'Profile Components/Logine.dart';
 
@@ -49,7 +50,7 @@ class _MyAppState extends State<MyApp> {
             if (user == null) {
               return LoginPage();
             } else {
-              return jobsList();
+              return BottomNavigatorExample();
             }
           } else {
             return Scaffold(body: Center(child: CircularProgressIndicator()));
